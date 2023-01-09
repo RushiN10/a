@@ -1,0 +1,720 @@
+CERTIFICATE
+This is to certify that
+Mr./Miss/Ms._________________________________ student of
+B.Sc.(CS) /B.Sc(Animation)/B.Com. /BCA / MCA (Comm.) /
+M.Sc(CS) /MCA(Sci.) Semester_____________ having Seat No.
+_______________at Suryadatta College of Management Information
+Research & Technology (SCMIRT), Pune, has successfully
+completed the assigned practical in
+_____________________________ prescribed by the University of
+Pune During the academic year__________________.
+
+Internal Examiner
+
+External Examiner
+Principa
+
+l Place: Pune
+Date:
+
+COMPUTER APPLICATION
+Submitted
+on__________________________InCharge_________________________________________
+Name
+________________________________________________________________________________
+____
+Course_______________________ Semester______________________
+Batch_____________________
+Expt.No._______________Title_____________________________________________________
+__________________________________________________________________________
+
+CERTIFICATE
+This is to certify that
+Mr./Miss/Ms._________________________________
+Student of B.Sc. (CS) / B.Sc(Animation)/ BCA / MCA (Comm.) /
+MSC (CS) / MCA (Sci.) Semester_____________ having Seat No.
+_______________at
+Suryadatta College of Management Information Research &
+Technology
+
+(SCMIRT), Pune has successfully completed the assigned Project
+titled _________________________________ as per the norms of
+University of Pune During the academic year__________________.
+
+Internal Examiner
+
+External Examiner
+
+Project Guide
+Principal
+Place: Pune
+Date:
+
+Mongodb:
+1) Create a database with the name 'Movie'.
+use Movie
+'switched to db Movie'
+
+2)Create a Film and Actor collection -
+
+db.createCollection("Film")
+{ ok: 1 }
+
+db.createCollection("Actor")
+
+{ ok: 1 }
+
+3)Insert record in the Film collection of documents with the following feilds:
+(a) Film Id
+
+(b) Title of the Film
+(c) Year of release
+(d) Genre/Category
+(e) Actors(First name and Last name)
+(f) Director(First name and Last name)
+(g) Release Details(Place of release,Date,Rating)
+
+*Insert 10 Records*
+
+1
+
+db.Film.insertOne({Fid:101,Ftitle:"Avengers:Endgame",year_of_release:"2019",
+genre:["action","adventure","drama"],actors:[{fname:"robert",lname:"downeyjr"},
+
+{fname:"chris",lnmae:"evans"}],director:[{dfname:"anthony",dlname:"russo"},
+{dfname:"joe",dlname:"russo"}],release_details:[{place_of_release:"convention centre",
+date_of_release:"04/22/2019",rating:"A+"}]})
+
+{ acknowledged: true,
+insertedId: ObjectId("63b84305a3d9b422e12fdf15") }
+
+2
+
+db.Film.insertOne({Fid:102,Ftitle:"Avengers:Infinity War",year_of_release:"2018",
+
+genre:["action","adventure","Sci-Fi"],actors:[{fname:"robert",lname:"downeyjr"},
+{fname:"chris",lnmae:"evans"}],director:[{dfname:"anthony",dlname:"russo"},
+{dfname:"joe",dlname:"russo"}],release_details:[{place_of_release:"Do lby theatre",
+date_of_release:"04/23/2019",rating:"A"}]})
+
+{ acknowledged: true,
+insertedId: ObjectId("63b846eba3d9b422e12fdf16") }
+
+3
+
+db.Film.insertOne({Fid:103,Ftitle:"The Lion King",year_of_release:"2019",
+genre:["animation","adventure","drama"],actors:[{fname:"donald",lname:"glover"},
+{fname:"seth",lnmae:"rogen"}],director:[{dfname:"jon",dlname:"favreau"}],
+
+release_details:[{place_of_release:"hollywood",date_of_release:"07/09/2019",rating:"A
+"}]})
+
+{ acknowledged: true,
+insertedId: ObjectId("63b84838a3d9b422e12fdf17") }
+
+4
+
+db.Film.insertOne({Fid:104,Ftitle:"Spider-Man:Far From
+
+Home",year_of_release:"2019",
+genre:["action","adventure","drama"],actors:[{fname:"tom",lname:"holland"},
+{fname:"samuel",lnmae:"jackson"}],director:[{dfname:"jon",dlname:"watts"}],
+release_details:[{place_of_release:"hollywood",date_of_release:"06/26/2019",rating:"A
+"}]})
+
+{ acknowledged: true,
+
+insertedId:
+
+ObjectId("63b84b36a3d9b422e12fdf18") }
+
+5
+
+db.Film.insertOne({Fid:105,Ftitle:"Dil to pagal hai",year_of_release:"1997",
+genre:["comedy","musical","drama"],actors:[{fname:"shahrukh",lname:"khan"},
+{fname:"madhuri",lnmae:"dixit"}],director:[{dfname:"yash",dlname:"chopra"}],
+release_details:[{place_of_release:"india",date_of_release:"10/31/1997",rating:"A"}]})
+
+{ acknowledged: true,
+insertedId: ObjectId("63b84c4ea3d9b422e12fdf19") }
+
+6
+
+db.Film.insertOne({Fid:106,Ftitle:"hum tumhare hai sanam",year_of_release:"2002",
+genre:["romance","drama"],actors:[{fname:"salman",lname:"khan"},
+{fname:"madhuri",lnmae:"dixit"}],director:[{dfname:"K",dlname:"adhiyaman"}],
+release_details:[{place_of_release:"india",date_of_release:"05/24/2002",rating:"A"}]})
+
+{ acknowledged: true,
+
+insertedId: ObjectId("63b84cf8a3d9b422e12fdf1a") }
+
+7
+
+db.Film.insertOne({Fid:107,Ftitle:"hum aapke hai kaun",year_of_release:"1994",
+genre:["comedy","drama","musical"],actors:[{fname:"salman",lname:"khan"},
+{fname:"madhuri",lnmae:"dixit"},{fname:"sooraj",lname:"barjatya"}],
+director:[{dfname:"sooraj",dlname:"barjatya"}],
+release_details:[{place_of_release:"india",date_of_release:"08/05/1994",rating:"A"}]})
+
+{ acknowledged: true,
+insertedId: ObjectId("63b84ddba3d9b422e12fdf1b") }
+
+8
+
+db.Film.insertOne({Fid:108,Ftitle:"avatar",year_of_release:"2009",
+genre:["action","adventure","fantasy"],actors:[{fname:"sam",lname:"worthington"},
+
+{fname:"zoe",lnmae:"saladana"},{fname:"stephan",lname:"lang"}],
+director:[{dfname:"james",dlname:"cameron"}],
+release_details:[{place_of_release:"london",date_of_release:"12/10/2009",rating:"A"}]})
+
+{ acknowledged: true,
+insertedId: ObjectId("63b84ea3a3d9b422e12fdf1c") }
+
+9
+
+db.Film.insertOne({Fid:109,Ftitle:"brothers",year_of_release:"2015",
+genre:["action","drama","sport"],actors:[{fname:"akshay",lname:"kumar"},
+{fname:"sidharth",lnmae:"malhotra"},{fname:"jacqueline",lname:"fernandez"}],
+director:[{dfname:"karan",dlname:"malhotra"}],
+release_details:[{place_of_release:"India",date_of_release:"08/14/2015",rating:"A"}]})
+
+{ acknowledged: true,
+
+insertedId:
+
+ObjectId("63b84f7fa3d9b422e12fdf1d") }
+
+10
+
+db.Film.insertOne({Fid:110,Ftitle:"war",year_of_release:"2019",
+genre:["action","thriller"],actors:[{fname:"rithik",lname:"roshan"},
+
+{fname:"tiger",lnmae:"shroff"}],director:[{dfname:"siddharth",dlname:"anand"}],
+release_details:[{place_of_release:"India",date_of_release:"10/02/2019",rating:"A"}]})
+
+{ acknowledged: true,
+insertedId: ObjectId("63b85078a3d9b422e12fdf1e") }
+
+4)Insert record in the Actor collection of documents with the following feilds:
+(a) Actor Id
+(b) First name
+(c) Last name
+(d) Address
+(e) Contact Details
+(f) Age of an actor
+
+*Insert 10 Records*
+
+1
+
+db.Actor.insertOne({Aid:201,Afname:"robert",Alname:"downeyjr",
+address:[{street:"california",Country:"united states",pincode:"90291"}],
+contact_details:[{email:"robert_downeyjr@gmail.com",Phone:14242882000}],Age:54})
+
+{ acknowledged: true, insertedId:
+ObjectId("63b852b7a3d9b422e12fdf1f") }
+
+2
+
+db.Actor.insertOne({Aid:202,Afname:"chris",Alname:"evans",
+address:[{street:"morrissey blvd",Country:"boston",pincode:"90292"}],
+contact_details:[{email:"chris.evans@gmail.com",Phone:13242882000}],Age:38})
+
+{ acknowledged: true,
+
+insertedId:
+
+ObjectId("63b853b9a3d9b422e12fdf20") }
+
+3
+
+db.Actor.insertOne({Aid:203,Afname:"seth",Alname:"rogen",
+address:[{street:"nadeau",Country:"united states",pincode:"90298"}],
+contact_details:[{email:"rogenseth@gmail.com",Phone:13246882000}],Age:37})
+
+{ acknowledged: true,
+
+insertedId:
+
+ObjectId("63b8589da3d9b422e12fdf21") }
+
+4
+
+db.Actor.insertOne({Aid:204,Afname:"samuel",Alname:"jackson",
+address:[{street:"wilshireblvd",Country:"united states",pincode:"97298"}],
+contact_details:[{email:"samuel.jackson@gmail.com",Phone:13246782000}],Age:70})
+
+{ acknowledged: true, insertedId:
+ObjectId("63b85903a3d9b422e12fdf22") }
+
+5
+
+db.Actor.insertOne({Aid:205,Afname:"shahrukh",Alname:"khan",
+address:[{street:"h k road",Country:"india",pincode:"77298"}],
+
+contact_details:[{email:"iamsrk@gmail.com",Phone:12756782000}],Age:53})
+{ acknowledged: true,
+insertedId: ObjectId("63b85996a3d9b422e12fdf23") }
+
+6
+
+db.Actor.insertOne({Aid:206,Afname:"madhuri",Alname:"dixit",
+address:[{street:"vijaydeep",Country:"india",pincode:"75298"}],
+contact_details:[{email:"madhuri.dixit@gmail.com",Phone:127560098000}],Age:52})
+
+{ acknowledged: true,
+insertedId: ObjectId("63b85a14a3d9b422e12fdf24") }
+
+7
+
+db.Actor.insertOne({Aid:207,Afname:"salman",Alname:"khan",
+address:[{street:"BJroad",Country:"india",pincode:"74298"}],
+contact_details:[{email:"beingsalmankhan@gmail.com",Phone:127560000000}],Age:53})
+
+{ acknowledged: true,
+insertedId: ObjectId("63b85a4ca3d9b422e12fdf25") }
+
+8
+
+db.Actor.insertOne({Aid:208,Afname:"sam",Alname:"worthington",
+address:[{street:"E 99th ST",Country:"united states",pincode:"74290"}],
+contact_details:[{email:"sam.w@gmail.com",Phone:127560000001}],Age:43})
+
+{ acknowledged: true,
+insertedId: ObjectId("63b85aaba3d9b422e12fdf26") }
+
+9
+
+db.Actor.insertOne({Aid:209,Afname:"akshay",Alname:"kumar",
+address:[{street:"gandhi gram road",Country:"india",pincode:"74760"}],
+contact_details:[{email:"iamak@gmail.com",Phone:127560004501}],Age:52})
+
+{ acknowledged: true,
+insertedId: ObjectId("63b85b06a3d9b422e12fdf27") }
+10
+
+db.Actor.insertOne({Aid:210,Afname:"hrithik",Alname:"roshan",
+address:[{street:"11th juhu",Country:"india",pincode:"34760"}],
+contact_details:[{email:"hrithikroshan@gmail.com",Phone:567560004501}],Age:45})
+
+{ acknowledged: true,
+insertedId: ObjectId("63b85b4fa3d9b422e12fdf28") }
+
+5) Display all the documents inserted in the Film Collection-
+
+db.Film.find().pretty()
+{ _id: ObjectId("63b84305a3d9b422e12fdf15"),
+Fid: 101,
+Ftitle: 'Avengers:Endgame',
+
+year_of_release:
+
+'2019',
+genre: [ 'action', 'adventure', 'drama' ],
+actors:
+[ { fname: 'robert', lname: 'downeyjr' },
+{ fname: 'chris', lnmae: 'evans' } ],
+director:
+[ { dfname: 'anthony', dlname: 'russo' },
+{ dfname: 'joe', dlname: 'russo' } ], release_details:
+[ { place_of_release: 'convention centre',
+date_of_release: '04/22/2019',
+rating: 'A+' } ] }
+
+{ _id: ObjectId("63b846eba3d9b422e12fdf16"),
+Fid: 102,
+Ftitle: 'Avengers:Infinity War',
+
+year_of_release:
+
+'2018', genre: [ 'action', 'adventure', 'Sci-Fi' ],
+actors:
+[ { fname: 'robert', lname: 'downeyjr' },
+{ fname: 'chris', lnmae: 'evans' } ],
+director:
+[ { dfname: 'anthony', dlname: 'russo' },
+{ dfname: 'joe', dlname: 'russo' } ],
+release_details:
+
+[ { place_of_release: 'Do lby theatre',
+
+date_of_release:
+
+'04/23/2019',
+rating: 'A' } ] }
+
+{ _id: ObjectId("63b84838a3d9b422e12fdf17"),
+Fid: 103,
+Ftitle: 'The Lion King',
+
+year_of_release: '2019',
+
+genre: [ 'animation', 'adventure', 'drama' ],
+actors:
+[ { fname: 'donald', lname: 'glover' },
+
+{
+
+fname: 'seth', lnmae: 'rogen' } ],
+director: [ { dfname: 'jon', dlname: 'favreau' } ],
+release_details:
+'hollywood',
+
+[ { place_of_release:
+date_of_release: '07/09/2019',
+
+rating: 'A' } ] }
+
+{ _id: ObjectId("63b84b36a3d9b422e12fdf18"),
+Fid: 104,
+Ftitle: 'Spider-Man:Far From Home',
+year_of_release: '2019',
+
+genre: [
+
+'action', 'adventure', 'drama' ], actors:
+[ { fname: 'tom', lname: 'holland' },
+
+{ fname:
+
+'samuel', lnmae: 'jackson' } ],
+
+director: [ { dfname:
+
+'jon', dlname: 'watts' } ],
+
+release_details:
+
+[ { place_of_release: 'hollywood',
+date_of_release: '06/26/2019',
+rating: 'A' } ] }
+
+{ _id: ObjectId("63b84c4ea3d9b422e12fdf19"),
+Fid: 105,
+
+Ftitle: 'Dil to pagal hai',
+year_of_release: '1997',
+
+genre: [
+
+'comedy', 'musical', 'drama' ],
+actors:
+[ { fname: 'shahrukh', lname: 'khan' },
+
+{
+
+fname: 'madhuri', lnmae: 'dixit' } ],
+director: [ { dfname: 'yash', dlname: 'chopra' } ],
+release_details:
+
+[ { place_of_release: 'india',
+
+date_of_release: '10/31/1997',
+rating: 'A' } ] }
+
+{ _id: ObjectId("63b84cf8a3d9b422e12fdf1a"),
+Fid: 106,
+Ftitle: 'hum tumhare hai sanam',
+year_of_release: '2002',
+'romance', 'drama' ],
+
+genre: [
+actors:
+
+[ { fname: 'salman', lname: 'khan' },
+{ fname: 'madhuri', lnmae: 'dixit' } ],
+director: [ { dfname: 'K', dlname: 'adhiyaman' } ],
+release_details:
+[ { place_of_release: 'india',
+
+date_of_release:
+
+'05/24/2002',
+rating: 'A' } ] }
+
+{ _id: ObjectId("63b84ddba3d9b422e12fdf1b"),
+Fid: 107,
+Ftitle: 'hum aapke hai kaun',
+year_of_release: '1994',
+'comedy', 'drama', 'musical' ],
+actors:
+
+genre: [
+
+[ { fname: 'salman', lname: 'khan' },
+{ fname: 'madhuri', lnmae: 'dixit' },
+{ fname: 'sooraj', lname: 'barjatya' } ],
+director: [ { dfname: 'sooraj', dlname: 'barjatya' } ],
+[ { place_of_release: 'india',
+
+date_of_release:
+
+'08/05/1994',
+rating: 'A' } ] }
+
+{ _id: ObjectId("63b84ea3a3d9b422e12fdf1c"),
+Fid: 108,
+Ftitle: 'avatar',
+'2009',
+
+year_of_release:
+genre: [ 'action', 'adventure',
+
+'fantasy' ],
+actors:
+[ { fname: 'sam', lname: 'worthington' },
+{ fname: 'zoe', lnmae: 'saladana' },
+lname: 'lang' } ],
+
+{ fname: 'stephan',
+
+director: [ { dfname: 'james',
+
+dlname: 'cameron' } ], release_details:
+place_of_release: 'london',
+
+date_of_release:
+
+'12/10/2009',
+rating: 'A' } ] }
+
+{ _id: ObjectId("63b84f7fa3d9b422e12fdf1d"),
+Fid: 109,
+Ftitle: 'brothers',
+'2015',
+
+year_of_release:
+
+genre: [ 'action', 'drama',
+
+'sport' ],
+actors:
+[ { fname: 'akshay', lname: 'kumar' },
+{ fname: 'sidharth', lnmae: 'malhotra' },
+
+[{
+
+release_details:
+
+{ fname: 'jacqueline', lname: 'fernandez' } ],
+
+director: [
+
+{ dfname: 'karan', dlname: 'malhotra' } ],
+release_details:
+[ { place_of_release: 'India',
+
+date_of_release:
+
+'08/14/2015',
+rating: 'A' } ] }
+
+{ _id: ObjectId("63b85078a3d9b422e12fdf1e"),
+Fid: 110,
+
+Ftitle: 'war',
+
+year_of_release: '2019',
+genre: [ 'action', 'thriller' ],
+actors:
+[ { fname: 'rithik', lname: 'roshan' },
+{ fname: 'tiger', lnmae: 'shroff' } ],
+
+director: [ {
+
+dfname: 'siddharth', dlname: 'anand' } ],
+release_details:
+[ { place_of_release: 'India',
+date_of_release: '10/02/2019',
+rating: 'A' } ] }
+
+6) Display all the documents inserted in the Actor Collectiondb.Actor.find().pretty()
+{ _id: ObjectId("63b852b7a3d9b422e12fdf1f"),
+Aid: 201,
+Afname: 'robert',
+'downeyjr',
+
+Alname:
+
+address:
+
+[ { street: 'california',
+'united states',
+
+Country:
+
+pincode: '90291' }
+
+],
+contact_details: [ { email: 'robert_downeyjr@gmail.com', Phone: 14242882000 } ],
+Age: 54 }
+
+{ _id: ObjectId("63b853b9a3d9b422e12fdf20"),
+Aid: 202,
+Afname: 'chris',
+Alname: 'evans',
+address: [ { street: 'morrissey blvd', Country: 'boston', pincode: '90292' } ],
+
+contact_details:
+
+[ { email: 'chris.evans@gmail.com', Phone: 13242882000 } ],
+Age: 38 }
+
+{ _id: ObjectId("63b8589da3d9b422e12fdf21"),
+Aid: 203,
+Afname: 'seth',
+Alname: 'rogen',
+address: [ { street: 'nadeau', Country: 'united states', pincode: '90298' } ], contact_details: [ {
+email: 'rogenseth@gmail.com', Phone: 13246882000 } ], Age: 37 }
+
+{ _id: ObjectId("63b85903a3d9b422e12fdf22"),
+Aid: 204,
+Afname: 'samuel',
+'jackson',
+
+Alname:
+
+address:
+
+[ { street: 'wilshireblvd',
+'united states',
+
+Country:
+
+pincode: '97298' }
+
+],
+contact_details: [ { email: 'samuel.jackson@gmail.com', Phone: 13246782000 } ],
+Age: 70 }
+
+{ _id: ObjectId("63b85996a3d9b422e12fdf23"),
+Aid: 205,
+Afname: 'shahrukh',
+
+Alname:
+
+'khan',
+address: [ { street: 'h k road', Country: 'india', pincode: '77298' } ],
+
+contact_details: [
+
+{ email: 'iamsrk@gmail.com', Phone: 12756782000 } ],
+Age: 53 }
+
+{ _id: ObjectId("63b85a14a3d9b422e12fdf24"),
+Aid: 206,
+Afname: 'madhuri',
+
+Alname:
+
+'dixit',
+address: [ { street: 'vijaydeep', Country: 'india', pincode: '75298' } ],
+
+contact_details: [ {
+
+email: 'madhuri.dixit@gmail.com', Phone: 127560098000 } ],
+Age: 52 }
+
+{ _id: ObjectId("63b85a4ca3d9b422e12fdf25"),
+Aid: 207,
+Afname: 'salman',
+Alname: 'khan',
+'74298' } ],
+
+address: [ { street: 'BJroad', Country: 'india', pincode:
+
+contact_details: [ { email: 'beingsalmankhan@gmail.com', Phone:
+
+127560000000 } ],
+Age: 53 }
+
+{ _id: ObjectId("63b85aaba3d9b422e12fdf26"),
+Aid: 208,
+Afname: 'sam',
+Alname: 'worthington',
+address:
+
+[ { street: 'E 99th ST',
+'united states',
+
+Country:
+
+pincode: '74290' }
+
+],
+contact_details: [ { email: 'sam.w@gmail.com', Phone: 127560000001 } ],
+Age: 43 }
+
+{ _id: ObjectId("63b85b06a3d9b422e12fdf27"),
+Aid: 209,
+Afname: 'akshay',
+'kumar',
+
+Alname:
+
+address:
+
+[ { street: 'gandhi gram road',
+Country: 'india',
+
+pincode:
+
+'74760' } ],
+contact_details: [ { email: 'iamak@gmail.com', Phone: 127560004501 } ],
+Age: 52 }
+
+{ _id: ObjectId("63b85b4fa3d9b422e12fdf28"),
+Aid: 210,
+Afname: 'hrithik', Alname: 'roshan', address: [ { street: '11th juhu',
+Country: 'india', pincode: '34760' } ],
+contact_details: [ { email: 'hrithikroshan@gmail.com', Phone: 567560004501 } ],
+Age: 45 }
+
+7) Delete the film "Avatar" -
+
+db.File.deleteOne({Ftitle:"avatar"})
+{ acknowledged: true, deletedCount: 0 }
+
+8) Delete an actor named "Salman"
+
+db.Actor.deleteOne({Afname:"salman"})
+{ acknowledged: true, deletedCount: 1 }
+
+9) Delete all actors from an 'Actor' collection who have age greater than
+"50"-
+
+db.Actor.deleteMany({Age:{$gt:50}})
+{ acknowledged: true, deletedCount: 4 }
+
+10) Update the actor's address where Id is "210"
+db.Actor.updateMany({Aid:210},
+{$set:{address:[{street:"1260
+nadeau",Country:"united states",pincode:"9002"}]}})
+{ acknowledged: true,
+insertedId: null,
+matchedCount: 1,
+1,
+
+modifiedCount:
+
+upsertedCount: 0 }
+
+11) Update the genre of the film directed by "Yash Chopra"-
+
+db.Film.updateMany({"director.dfname":"yash"},{$set:{genre:["adven
+ture","comedy"]}})
+{ acknowledged: true,
+
+insertedId: null,
+
+matchedCount: 1,
+
+modifiedCount:
+
+1,
+
+upsertedCount: 0 }
+
+

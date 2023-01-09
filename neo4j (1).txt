@@ -1,0 +1,94 @@
+CERTIFICATE
+This is to certify that
+Mr./Miss/Ms._________________________________ student of
+B.Sc.(CS) /B.Sc(Animation)/B.Com. /BCA / MCA (Comm.) /
+M.Sc(CS) /MCA(Sci.) Semester_____________ having Seat No.
+_______________at Suryadatta College of Management Information
+Research & Technology (SCMIRT), Pune, has successfully
+completed the assigned practical in
+_____________________________ prescribed by the University of
+Pune During the academic year__________________.
+
+Internal Examiner
+
+External Examiner
+Principa
+
+l Place: Pune
+Date:
+
+COMPUTER APPLICATION
+Submitted
+on__________________________InCharge_________________________________________
+Name
+________________________________________________________________________________
+____
+Course_______________________ Semester______________________
+Batch_____________________
+Expt.No._______________Title_____________________________________________________
+__________________________________________________________________________
+
+CERTIFICATE
+This is to certify that
+Mr./Miss/Ms._________________________________
+Student of B.Sc. (CS) / B.Sc(Animation)/ BCA / MCA (Comm.) /
+MSC (CS) / MCA (Sci.) Semester_____________ having Seat No.
+_______________at
+Suryadatta College of Management Information Research &
+Technology
+
+(SCMIRT), Pune has successfully completed the assigned Project
+titled _________________________________ as per the norms of
+University of Pune During the academic year__________________.
+
+Internal Examiner
+Project Guide
+Principal
+Place: Pune
+Date:
+
+External Examiner
+
+SUBJECT: Neo4j
+Practical Assignment
+
+CREATE (library:author{name:"jon le
+carre",born:"19/10/1932"})
+CREATE
+(l:book{title:["tinker","tailor","soldier","spy"],publish:"1974"}
+)
+CREATE (d:book{title:"our man in havana",publish:"1958"})
+
+CREATE
+(g:author{name:"graham",born:"2/10/1904",died:"2/4/1991"
+})
+CREATE (library)-[r:worte_of]->(l)-[t:read_of]->(b)[f:book_of]->(c)-[j:author_book]->(d)-[k:wrote_of]->(g)
+RETURN library,l,b,c,d,g
+
+Consider a Song database, with labels as Artists,
+Song,Recording_company, Recoding_studio, song author etc.
+Relationships can be as follows Artist→[Performs]→Song
+→[Written by]→Song_author. Song →[Recorded in ]
+→Recording Studio →[managed by] →recordingCompany
+Recording Company →[Finances] →Song You may add more
+
+labels and relationship and their properties, as per
+assumptions.
+
+ANS:
+CREATE(song_autorsong:singer{name:"song_autorsong",yod:
+"4/6/7"})
+CREATE(recording_studio:name{name:"recording_studio"})
+CREATE(recordingcompaCREATE(artis:actor{name:"artis",yod:
+"2/4/1985"})
+CREATE (song:mus{musicname:"song",date:"6/7/11"})
+ny:SAMPLE{name:"recordingcompany"})
+CREATE(song:song{name:"song"})
+CREATE (artis)-[:perform]->(song)-[:written_by]>(song_autorsong)-[:Recorded_in]->(recording_studio)[:managed_by]->(recordingcompany)-[:finances]->(song)
+RETURN
+artis,song,song_autorsong,recording_studio,recordingcompa
+ny
+
+OUTPUT :
+
+
